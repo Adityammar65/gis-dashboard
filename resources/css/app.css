@@ -1,0 +1,130 @@
+/* Fon */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+@import './responsive.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-poppins: 'Poppins', sans-serif;
+
+    /* Dark Mode */
+    --color-night-950: #140b0b;
+    --color-night-900: #221314;
+    --color-night-800: #3a1d1d;
+    --color-night-700: #4a2424;
+    --color-night-600: #5a2e2e;
+    --color-night-200: #e9d5d5;
+    --color-night-300: #d8bfbf;
+    --color-night-400: #c9a9a9;
+    --color-night-500: #a98a8a;
+}
+
+html {
+    transition: color-scheme 0.2s ease;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+html.dark body {
+    background-color: var(--color-night-950);
+    color: var(--color-night-200);
+}
+
+.dark .leaflet-container {
+    background: #140b0b;
+}
+
+.dark .leaflet-tile-pane {
+    filter: brightness(0.65) invert(1) contrast(0.92) hue-rotate(180deg) saturate(0.7);
+}
+
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+    background: #221314;
+    color: #e9d5d5;
+    border: 1px solid #4a2424;
+}
+
+.dark .leaflet-popup-content {
+    color: #e9d5d5;
+}
+
+.dark .leaflet-bar a,
+.dark .leaflet-control-attribution {
+    background-color: #221314 !important;
+    color: #c9a9a9 !important;
+    border-color: #4a2424 !important;
+}
+
+.dark .leaflet-bar a:hover {
+    background-color: #3a1d1d !important;
+}
+
+.gis-map-wrap {
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+}
+
+.gis-asset-marker {
+    background: transparent;
+    border: none;
+}
+
+.gis-asset-marker > .gis-pin {
+    transition: transform 0.15s ease;
+    transform-origin: 50% 100%;
+}
+
+.gis-asset-marker.gis-pin-active > .gis-pin,
+.gis-asset-marker:focus > .gis-pin,
+.gis-asset-marker:focus-within > .gis-pin {
+    transform: scale(1.05);
+}
+
+.gis-asset-marker.gis-pin-active {
+    z-index: 1000 !important;
+}
+
+.gis-map-wrap .leaflet-container {
+    z-index: 0;
+}
+
+.gis-map-wrap .leaflet-tile-pane {
+    z-index: 1;
+}
+
+.gis-map-wrap .leaflet-overlay-pane {
+    z-index: 2;
+}
+
+.gis-map-wrap .leaflet-shadow-pane {
+    z-index: 3;
+}
+
+.gis-map-wrap .leaflet-marker-pane {
+    z-index: 4;
+}
+
+.gis-map-wrap .leaflet-tooltip-pane {
+    z-index: 5;
+}
+
+.gis-map-wrap .leaflet-popup-pane {
+    z-index: 6;
+}
+
+.gis-map-wrap .leaflet-top,
+.gis-map-wrap .leaflet-bottom {
+    z-index: 10;
+}

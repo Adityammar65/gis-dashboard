@@ -1,0 +1,94 @@
+/* Mobile */
+
+@media (max-width: 767px) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+
+    /* Masuk */
+
+    .gis-auth-hero {
+        border-bottom-left-radius: 1.75rem;
+        border-bottom-right-radius: 1.75rem;
+    }
+
+    /* Notifikasi */
+
+    .font-poppins .fixed.left-1\/2.top-5 {
+        width: calc(100vw - 2rem);
+        max-width: 100vw;
+    }
+
+    /* Tabel */
+
+    .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    /* Peta */
+
+    .leaflet-popup-content {
+        max-width: calc(100vw - 4rem) !important;
+        margin: 12px 14px !important;
+    }
+
+    /* Koordinat */
+
+    .leaflet-control .rounded-md.bg-white\/90 {
+        font-size: 10px;
+    }
+
+    /* Filter */
+
+    .gis-mobile-filter button,
+    .gis-mobile-filter select {
+        min-height: 40px;
+    }
+
+    /* Kartu */
+
+    .gis-mobile-card p,
+    .gis-mobile-card span {
+        overflow-wrap: anywhere;
+    }
+
+    /* Rel Ikon */
+
+    :root {
+        --gis-rail: 4rem;
+    }
+
+    .gis-rail {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    .gis-rail a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .gis-rail nav {
+        scrollbar-width: none;
+        max-height: calc(100vh - 60px);
+        max-height: calc(100dvh - 60px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .gis-rail nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Laci Mobile */
+
+    .gis-drawer-nav {
+        scrollbar-width: none;
+    }
+
+    .gis-drawer-nav::-webkit-scrollbar {
+        display: none;
+    }
+}
